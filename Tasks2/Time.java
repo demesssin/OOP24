@@ -33,7 +33,12 @@ public class Time {
         if (hour12 == 0){
             hour12 = 12;
         }
-        String period = (hour >= 12) ? "PM" : "AM";
+        String period;
+        if (hour >= 12) {
+            period = "PM";
+        } else {
+            period = "AM";
+        }
         System.out.printf("%02d:%02d:%02d", hour12, minute, second, period);
     }
 }

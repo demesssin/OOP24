@@ -19,4 +19,9 @@ public class StarTriangle {
         }
         return triangle.toString();
     }
+
+    public static void main(String[] args) {
+        StarTriangle tr = new StarTriangle();
+        System.out.println();
+    }
 }

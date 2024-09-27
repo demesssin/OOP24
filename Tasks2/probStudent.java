@@ -5,8 +5,8 @@ public class probStudent {
     private int id;
     private int year_of_study;
 
-    public probStudent(String name, int id) {
-        this.name = name;
+    public probStudent(String Sname, int id) {
+        name = Sname;
         this.id = id;
         this.year_of_study = 0;
     }
