@@ -1,6 +1,6 @@
-package Practice3;
+package Practice3.Task1;
 
-public class Cow extends Animal{
+public class Cow extends Animal {
     private int cowWeight;
 
     public Cow(){

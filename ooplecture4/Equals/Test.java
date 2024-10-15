@@ -1,6 +1,6 @@
 package ooplecture4.Equals;
 
-public class Test {
+public class    Test {
     public static void main(String[] args) throws CloneNotSupportedException {
         Car car1 = new Car("Tesla");
         Car car2 = new Car("Tesla");

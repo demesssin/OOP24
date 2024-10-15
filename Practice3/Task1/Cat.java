@@ -1,6 +1,6 @@
-package Practice3;
+package Practice3.Task1;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
     public Cat(String name){
         super(name);
     }

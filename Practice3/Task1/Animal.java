@@ -1,4 +1,4 @@
-package Practice3;
+package Practice3.Task1;
 
 public class Animal {
     private String name;
