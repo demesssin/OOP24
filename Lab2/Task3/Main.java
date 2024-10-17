@@ -4,19 +4,33 @@ public class Main {
     public static void main(String[] args) {
         Bank bank = new Bank();
 
-        CheckingAccount chAcc = new CheckingAccount(1);
-        SavingsAccount saAcc = new SavingsAccount(2, 3.5);
+        SavingsAccount sAcc1 = new SavingsAccount(1,15.0);
+        SavingsAccount sAcc2 = new SavingsAccount(2, 15.0);
 
-        bank.openAccount(chAcc);
-        bank.openAccount(saAcc);
+        CheckingAccount chAcc1 = new CheckingAccount(1);
+        CheckingAccount chAcc2 = new CheckingAccount(2);
 
-        chAcc.deposite(570);
-        chAcc.withdraw(160);
-        saAcc.deposite(100);
+        sAcc1.deposite(169880);
+        sAcc2.deposite(212000);
 
-        bank.updateAccounts();
-        bank.printAcc();
-        bank.closeAccount(1);
+        sAcc2.transfer(12000, sAcc1);
+
+        System.out.println(sAcc2.getBalance());
+        System.out.println(sAcc1.toString());
+        System.out.println(sAcc2.toString());
+
+        sAcc1.withdraw(18800);
+        System.out.println(sAcc1.getBalance());
+        sAcc2.addInterest();
+        System.out.println(sAcc2.getBalance());
+
+        chAcc1.deductFee();
+        System.out.println(chAcc1.toString());
+        chAcc1.deposite(150000);
+        System.out.println(chAcc1.toString());
+        chAcc1.transfer(15600, chAcc2);
+        System.out.println(chAcc1.toString());
+
 
 
     }
