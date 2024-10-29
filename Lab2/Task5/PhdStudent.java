@@ -20,7 +20,7 @@ public class PhdStudent extends Person{
 
     @Override
     public void assignPet(Animal pet) {
-        if ("Dog".equalsIgnoreCase(pet.getType())){
+        if (pet instanceof Dog){
             System.out.println("Phd Students cant have dog");
         }
         super.assignPet(pet);

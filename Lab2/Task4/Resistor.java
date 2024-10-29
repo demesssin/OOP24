@@ -23,6 +23,7 @@ public class Resistor extends Circuit{
         this.potentialDiff = V;
     }
 
+
     public void setPotentialDiff(double V){
         this.potentialDiff = V;
     }

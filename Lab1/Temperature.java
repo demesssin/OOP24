@@ -32,7 +32,7 @@ public class Temperature {
     public char getScale(){
         return scale;
     }
-    public void setScale(){
+    public void setScale(char scale){
         this.scale = scale;
     }
 

@@ -1,0 +1,5 @@
+Exceptions то есть исключения делятся на 2 больших типа
+Checked и Unchecked
+
+Checked Exception(Compile time exception) == исключительные случаи в работе программы
+Unchecked exception(Runtime exception) == ошибка в работе программы

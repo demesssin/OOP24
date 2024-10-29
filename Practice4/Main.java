@@ -48,7 +48,7 @@ public class Main {
                 int dx = centerX - i;
                 int dy = centerY - j;
                 if (dx * dx + dy * dy <= radius * radius) {
-                    System.out.print("*");
+                    System.out.print("* ");
                 } else {
                     System.out.print(" ");
                 }

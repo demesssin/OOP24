@@ -10,6 +10,7 @@ public class Main {
 
         // Тест слона
         Piece bishop = new Bishop(new Position(3, 3));
+        System.out.println("Slon");
         System.out.println(bishop.isLegalMove(new Position(5, 5))); // true
         System.out.println(bishop.isLegalMove(new Position(4, 2))); // true
         System.out.println(bishop.isLegalMove(new Position(3, 5))); // false
