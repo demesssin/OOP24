@@ -1,6 +1,4 @@
 package Exceptions.Checked;
-
-
 import java.io.IOException;
 import java.util.Scanner;
 
