@@ -1,6 +1,5 @@
 package Interfaces;
 
-import java.sql.SQLOutput;
 
 public class WaterPipe implements Stateable, EmployeeInfo{
     @Override

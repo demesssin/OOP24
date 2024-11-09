@@ -6,17 +6,17 @@ import java.util.Scanner;
 
 public class ReadFile {
     public static void main(String[] args)  {
-        Scanner scan2 = new Scanner(System.in);
-        String filename = scan2.nextLine();
+        Scanner scan1 = new Scanner(System.in);
+        String filename = scan1.nextLine();
         File path = new File(filename);
 
-        try (Scanner scan = new Scanner(path)){ // cпособ try with resources
-            while (scan.hasNextLine()){
-                System.out.println(scan.nextLine());
+        try (Scanner scan2 = new Scanner(path)){ // cпособ try with resources
+            while (scan2.hasNextLine()){
+                System.out.println(scan2.nextLine());
             }
         } catch (FileNotFoundException fnfe){
             fnfe.printStackTrace();
         }
-
+        scan1.close();
     }
 }

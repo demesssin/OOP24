@@ -7,7 +7,8 @@ public class Example3
 
 		for (int i = 0; i < data.length; i++){
 			System.out.println(data[i]);
+			System.out.println("Done");
 		}
-		System.out.println("Done");
+
 	}
 }
