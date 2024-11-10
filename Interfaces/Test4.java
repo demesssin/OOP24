@@ -5,6 +5,6 @@ public class Test4 {
         WaterPipe w1 = new WaterPipe();
         w1.printState(Stateable.OPEN);
         w1.printState(Stateable.CLOSED);
-        w1.printState(225554);
+        w1.printState(122);
     }
 }
