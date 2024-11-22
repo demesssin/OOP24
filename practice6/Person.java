@@ -1,16 +1,20 @@
 package practice6;
 
-public class Person implements CanHavePizza, Comparable<Person>{
+public class Person implements CanHavePizza, Comparable<Person> {
     private String name;
     private int age;
+    private int wallet; // How much money the person has
+    private int pizzasEaten; // Count of pizzas eaten
 
-    public Person(String name, int age) {
+    public Person(String name, int age, int wallet) {
         this.name = name;
         this.age = age;
+        this.wallet = wallet;
+        this.pizzasEaten = 0;
     }
 
-    public Person(){
-
+    public Person() {
+        this.pizzasEaten = 0;
     }
 
     public String getName() {
@@ -21,6 +25,14 @@ public class Person implements CanHavePizza, Comparable<Person>{
         return age;
     }
 
+    public int getWallet() {
+        return wallet;
+    }
+
+    public int getPizzasEaten() {
+        return pizzasEaten;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -29,9 +41,27 @@ public class Person implements CanHavePizza, Comparable<Person>{
         this.age = age;
     }
 
+    public void addFunds(int amount) {
+        this.wallet += amount;
+        System.out.println(name + " added $" + amount + " to their wallet.");
+    }
+
     @Override
-    public void eat() {
-        System.out.println("Someone is eating pizza");
+    public void eat(int pizzaSize) {
+        System.out.println(name + " is eating a pizza of size " + pizzaSize + " cm!");
+        pizzasEaten++;
+    }
+
+    @Override
+    public boolean canAffordPizza(int pizzaPrice) {
+        if (wallet >= pizzaPrice) {
+            wallet -= pizzaPrice;
+            System.out.println(name + " paid $" + pizzaPrice + " for the pizza. Remaining balance: $" + wallet);
+            return true;
+        } else {
+            System.out.println(name + " cannot afford the pizza. Wallet balance: $" + wallet);
+            return false;
+        }
     }
 
     @Override
@@ -41,6 +71,6 @@ public class Person implements CanHavePizza, Comparable<Person>{
 
     @Override
     public String toString() {
-        return "Person{name='" + name + "', age=" + age + "}";
+        return "Person{name='" + name + "', age=" + age + ", wallet=$" + wallet + ", pizzasEaten=" + pizzasEaten + "}";
     }
 }

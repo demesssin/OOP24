@@ -2,30 +2,44 @@ package practice6;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-       /* CanHavePizza cat = new Cat();
-        CanHavePizza person = new Person();
-        cat.eat();
-        person.eat();
+        // Create people
+        Person alice = new Person("Alice", 25, 50);
+        Person bob = new Person("Bob", 30, 15);
+        Person charlie = new Person("Charlie", 20, 100);
 
-        Restaurant restaurant = new Restaurant();
-        restaurant.service(cat);
-        restaurant.service(person);*/
+        // Create a restaurant with a pizza price
+        Restaurant pizzaHut = new Restaurant(35);
 
-        List<Person> people = new ArrayList<>();
-        people.add(new Person("Alice", 30));
-        people.add(new Person("Bob", 25));
-        people.add(new Person("Charlie", 35));
+        // Serve people
+        pizzaHut.service(alice);
+        pizzaHut.service(bob);
+        pizzaHut.service(charlie);
 
-        // Sort the list using the natural order defined by compareTo
-        Collections.sort(people, Collections.reverseOrder());
+        // Add funds to Bob and serve again
+        bob.addFunds(30);
+        pizzaHut.service(bob);
 
-        System.out.println("Sorted people by age:");
+        // List of people
+        ArrayList<Person> people = new ArrayList<>();
+        people.add(alice);
+        people.add(bob);
+        people.add(charlie);
+
+        // Sort people by age
+        Collections.sort(people);
+
+        System.out.println("\nPeople sorted by age:");
         for (Person person : people) {
             System.out.println(person);
+        }
+
+        // Show final stats
+        System.out.println("\nFinal Stats:");
+        for (Person person : people) {
+            System.out.println(person.getName() + " ate " + person.getPizzasEaten() + " pizzas.");
         }
     }
 }
