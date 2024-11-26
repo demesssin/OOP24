@@ -6,6 +6,5 @@ public interface MyCollection<T>{
     boolean contains(T element);
     int size();
     boolean isEmpty();
-    // T[] toArray();
     java.util.Iterator<T> iterator();
 }
