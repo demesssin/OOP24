@@ -15,15 +15,13 @@ public class Main {
         list.add(new Car("drake", 2010));
         list.add(new Car("yrban", 1998));
 
-        // System.out.println(list.toString());
+        //System.out.println(list.toString());
         // Collections.sort(list, new SortByYear());
-        Collections.sort(list, new SortByModel());
+        //Collections.sort(list, new SortByModel());
+        Collections.sort(list);
 
         for(Car car : list){
             System.out.println(car.getModel() + " | " + car.getYear());
         }
-
-
-
     }
 }

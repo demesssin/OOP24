@@ -1,6 +1,6 @@
 package ComparableLec;
 
-public class Car /*implements Comparable<Car>*/{
+public class Car implements Comparable<Car>{
     private String model;
     private int year;
 
@@ -27,7 +27,8 @@ public class Car /*implements Comparable<Car>*/{
         return "Car = " + model + ", year = " + year + "\n";
     }
 
-    /*@Override
+    /*
+    @Override
     public int compareTo(Car car) {
         if (year == car.getYear()){
             return 0;
@@ -37,14 +38,11 @@ public class Car /*implements Comparable<Car>*/{
         else {
             return -1;
         }
-    }                   -- тут сортировка по году
+    }                   // -- тут сортировка по году
+    */
 
-     */
-
-    /*@Override // тут по названию
+    @Override // тут по названию
     public int compareTo(Car car){
         return model.compareTo(car.getModel());
     }
-
-     */
 }

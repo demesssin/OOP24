@@ -1,6 +1,6 @@
 package Compares;
 
-public class Student {
+public class Student /*implements Comparable<Student>*/ {
     String name;
     int age;
     double grade;

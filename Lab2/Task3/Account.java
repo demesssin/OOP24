@@ -1,6 +1,6 @@
 package Lab2.Task3;
 
-public class Account{
+public class    Account{
     private double balance;
     private int accNumber;
     public Account(int accNumber){
